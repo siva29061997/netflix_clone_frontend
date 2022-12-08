@@ -1,0 +1,23 @@
+@import "../../sass/variables";
+
+.home {
+  background-color: var(--dark-color-700);
+  overflow: hidden;
+  & .movie-list-container {
+    overflow: visible;
+    margin-bottom: 24rem;
+    & .warning {
+      width: 100%;
+      text-align: center;
+      color: rgb(190, 190, 190);
+      font-size: 1rem;
+      padding: 4rem 2rem;
+      @media only screen and (min-width: $bp-min) {
+        font-size: 1.4rem;
+      }
+      @media only screen and (min-width: $bp-small) {
+        font-size: 2rem;
+      }
+    }
+  }
+}

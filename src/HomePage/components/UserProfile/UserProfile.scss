@@ -1,0 +1,123 @@
+@import "../../../sass/variables";
+
+.modal-user-profile {
+  width: 25rem;
+  height: 40rem;
+  left: calc(50% - 12.5rem);
+  background-color: rgb(28, 28, 28);
+  border-radius: 0.6rem;
+  transform: translateX(0);
+  @media only screen and (min-width: $bp-xsmall) {
+    width: 30rem;
+    height: auto;
+    left: calc(50% - 15rem);
+  }
+  @media only screen and (min-width: $bp-small) {
+    width: 50rem;
+    left: calc(50% - 25rem);
+  }
+  @media only screen and (min-width: $bp-moderate) {
+    width: 60rem;
+    left: calc(50% - 30rem);
+  }
+  & .input-container {
+    padding-bottom: 1rem;
+    @media only screen and (min-width: $bp-smallest) {
+      overflow-y: visible;
+      padding-bottom: 2rem;
+    }
+    & .input {
+      input,
+      textarea {
+        border: 1px solid rgba(82, 82, 82, 0.5);
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.8);
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+          // outline: 1px solid var(--light-border-color);
+          outline: none;
+          -webkit-box-shadow: 0 0 0px 100rem rgb(28, 28, 28) inset !important;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+      textarea {
+        line-height: 2.5rem;
+      }
+    }
+  }
+  & .profile-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+    @media only screen and (min-width: $bp-min) {
+      padding: 4rem 2rem;
+    }
+    @media only screen and (min-width: $bp-small) {
+      padding: 4rem 5rem;
+    }
+    & .personal-info {
+      margin-top: 4rem;
+      overflow-y: scroll;
+      @media only screen and (min-width: $bp-xsmall) {
+        overflow-y: visible;
+      }
+      & .heading {
+        color: rgb(255, 255, 255);
+        margin-bottom: 1rem;
+      }
+
+      & .info-1 {
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: $bp-moderate) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+      & .profile-btn-container {
+        display: flex;
+        justify-content: flex-end;
+        & .btn-cancel {
+          margin-right: 1.5rem;
+          &:hover {
+            background-color: rgb(83, 83, 83);
+            color: #fff;
+          }
+        }
+        & .btn {
+          padding: 0.5rem 1rem;
+          @media only screen and (min-width: $bp-smallest) {
+            padding: 1.6rem;
+          }
+        }
+      }
+    }
+    & .btn-icon,
+    & .btn-close {
+      top: 2%;
+      left: 98.5%;
+      border: none;
+      background-color: none;
+      &:hover {
+        background-color: none;
+      }
+      & svg {
+        font-size: 2rem;
+      }
+    }
+    & .btn-bubble.label {
+      top: -10%;
+      left: 53%;
+      z-index: 104;
+      font-size: 0.8rem;
+    }
+  }
+}
