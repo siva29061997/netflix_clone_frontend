@@ -50,7 +50,7 @@ const SearchViewItem = (props) => {
               // className={`poster ${isPosterHovered && "hide"}`}
               className={`poster`}
               alt="movie poster"
-              // onClick={showOnHoverHandler}
+            // onClick={showOnHoverHandler}
             />
           )}
           {isHovered && !showDetail && (
@@ -74,9 +74,9 @@ const SearchViewItem = (props) => {
                     movie: movieItem,
                     // trigger: triggerHandler,
                   }}
-                  // onClick={() => {
-                  //   triggerHandler();
-                  // }}
+                // onClick={() => {
+                //   triggerHandler();
+                // }}
                 >
                   <PlayArrowIcon />
                 </Button>

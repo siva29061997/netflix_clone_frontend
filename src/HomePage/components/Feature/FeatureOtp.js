@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
-import {env} from '../../../Config'
+import { env } from '../../../Config'
 import { useHttpClient } from "../../../shared/hooks/http-hook";
 import { useSelector } from "react-redux";
 
@@ -87,7 +87,7 @@ const FeatureOption = (props) => {
             <span className="desc">
               {movieShowcase.desc.length > 30
                 ? movieShowcase.desc.split(" ").splice(0, 30).join(" ") +
-                  "....."
+                "....."
                 : movieShowcase.desc}
             </span>
             <div className="buttons">

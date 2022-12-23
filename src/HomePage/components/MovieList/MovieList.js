@@ -86,7 +86,7 @@ const MovieList = (props) => {
           onClick={() => {
             scrollHandler("right");
           }}
-          // onClick={scrollRightHandler}
+        // onClick={scrollRightHandler}
         />
       </div>
     </div>

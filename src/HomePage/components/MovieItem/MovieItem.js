@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useMovieBtn } from "../../../shared/hooks/movie-hooks";
 import { useHttpClient } from "../../../shared/hooks/http-hook";
 import { Link } from "react-router-dom";
-import {env} from '../../../Config'
+import { env } from '../../../Config'
 import MovieDetail from "../MovieDetail/MovieDetail";
 import Button from "../../../shared/components/UI/Button/Button";
 import LoadingSpinner from "../../../shared/components/UI/Loading/LoadingSpinner";
@@ -40,7 +40,7 @@ const MovieItem = (props) => {
             { Authorization: `Bearer ${token}` }
           );
           setMovieItem(responseData.movie);
-        } catch (error) {}
+        } catch (error) { }
       };
       fetchMovieItem();
     } else {
@@ -75,7 +75,7 @@ const MovieItem = (props) => {
       key={props.id}
       className={`movie-item ${props.className}`}
       onMouseLeave={hideOnLeaveHandler}
-      // onMouseOver={hidePosterHandler}
+    // onMouseOver={hidePosterHandler}
     >
       {isLoading && <LoadingSpinner asOverlay inherit />}
       {movieItem && (
@@ -93,7 +93,7 @@ const MovieItem = (props) => {
                 // className={`poster ${isPosterHovered && "hide"}`}
                 className={`poster`}
                 alt="movie poster"
-                // onClick={showOnHoverHandler}
+              // onClick={showOnHoverHandler}
               />
             </Link>
           )}
@@ -125,9 +125,9 @@ const MovieItem = (props) => {
                     title: "Play this!",
                     placement: "top",
                   }}
-                  // onClick={() => {
-                  //   triggerHandler();
-                  // }}
+                // onClick={() => {
+                //   triggerHandler();
+                // }}
                 >
                   <PlayArrowIcon />
                 </Button>

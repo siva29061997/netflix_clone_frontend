@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {env} from '../../../Config';
+import { env } from '../../../Config';
 import { uiAction } from "../../../shared/store/ui";
 
 import { useForm } from "../../../shared/hooks/form-hooks";
